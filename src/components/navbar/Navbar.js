@@ -1,11 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [navExpanded, setNavExpanded] = useState(false)
+
   return (
     <nav className="navbar">
       <img className="brand" alt="1" />
-      <button className="hamburger">
+      <button onClick={() => {
+        setNavExpanded(!navExpanded)
+      }} className="hamburger">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -20,7 +24,7 @@ const Navbar = () => {
         </svg>
     
       </button>
-      <div className="nav-menu">
+      <div className={ navExpanded ? 'nav-menu expanded' : 'nav-menu'}>
         <ul>
           <li>Home</li>
           <li>About</li>
