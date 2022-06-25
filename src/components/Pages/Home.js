@@ -57,6 +57,9 @@ const Home = () => {
               alt="5"
             />
           </div>
+          <div>
+            <p>Spotify plugin</p>
+          </div>
       </div>
     </>
   );

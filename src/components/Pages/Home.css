@@ -22,12 +22,8 @@
   .home {
     flex-direction: column;
   }
-  
-  .connect {
-    flex-direction: column;
-  }
 
-  .shortinfo {
+  .connect {
     flex-direction: column;
   }
 }
@@ -38,6 +34,12 @@
   }
   .home img {
     margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .shortinfo {
+    flex-direction: column;
   }
 }
 
