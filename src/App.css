@@ -1,0 +1,18 @@
+.App {
+    background-color: aqua;
+}
+
+#Light {
+    background-color: aliceblue;
+}
+
+#Dark {
+    background-color: black;
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;  
+}
