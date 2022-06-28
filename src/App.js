@@ -6,12 +6,22 @@ import Resume from "./components/Pages/Resume";
 import Projects from "./components/Pages/Projects";
 import About from "./components/Pages/About";
 
+import "./App.css";
+import ReactSwitch from "react-switch";
+
 import { Route, Routes } from "react-router-dom";
+import { useTheme } from "./components/context/ThemeContextProvider";
 
 const App = () => {
+  const { theme, toggleTheme } = useTheme();
+  console.log(theme);
+
   return (
-    <div>
+    <div className="App" id={theme}>
       <Navbar />
+      <div className="switch">
+        <ReactSwitch onChange={toggleTheme} checked={theme === "Dark"} />
+      </div>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
