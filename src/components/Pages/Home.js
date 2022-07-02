@@ -1,16 +1,26 @@
 import React from "react";
 import "./Home.css";
 import { motion } from "framer-motion";
+import { ArrowUpward } from "@material-ui/icons";
+import { IconButton } from "@material-ui/core";
 
 const Home = () => {
+  const scrollUpHandler = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <div className="home">
         <div>
           <h3>
-            Hi there {" "}
+            Hi there{" "}
             <span>
-              <motion.div className="hand"
+              <motion.div
+                className="hand"
                 animate={{ rotate: 15 }}
                 transition={{
                   repeat: Infinity,
@@ -76,6 +86,11 @@ const Home = () => {
         </div>
         <div>
           <p>Spotify plugin</p>
+        </div>
+        <div>
+          <IconButton onClick={scrollUpHandler} fontSize='medium'>
+            <ArrowUpward/>
+          </IconButton>
         </div>
       </div>
     </>
