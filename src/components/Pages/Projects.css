@@ -1,5 +1,6 @@
 .projects {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
@@ -7,6 +8,7 @@
 
 .projects-container {
   display: flex;
+
   justify-content: center;
   align-items: center;
 }
@@ -14,27 +16,6 @@
 .projects ul {
   display: flex;
   justify-content: center;
-}
-
-.project {
-  display: flex;
-  min-width: 25vw;
-  margin-right: 5px;
-  margin-left: 5px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project h3 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.project-buttons {
-  display: flex;
-  min-width: 20vw;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
 }
