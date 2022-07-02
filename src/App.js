@@ -11,6 +11,7 @@ import ReactSwitch from "react-switch";
 
 import { Route, Routes } from "react-router-dom";
 import { useTheme } from "./components/context/ThemeContextProvider";
+import ProjectCard from "./components/projects/ProjectCard";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/about" element={<About />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/resume" element={<Resume />}></Route>
+        <Route path='/project/:id' element={<ProjectCard/>}></Route>
       </Routes>
       <Footer />
     </div>
