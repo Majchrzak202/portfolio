@@ -13,18 +13,18 @@ const Projects = () => {
       </div>
       <ul>
         {PROJECTS.map((project) => (
-          <ProjectCard
-            key={project.id}
-            id={project.id}
-            name={project.title}
-            descritpion={project.descritpion}
-            img={project.img}
-            imgalt={project.id}
-            demolink={project.links.site}
-            repoLink={project.links.repo}
-          >
-            <Link to={`/project/${project.id}`} />
-          </ProjectCard>
+          <Link key={project.id} to={`/project/${project.id}`}>
+            <ProjectCard
+              key={project.id}
+              id={project.id}
+              name={project.title}
+              descritpion={project.descritpion}
+              img={project.img}
+              imgalt={project.id}
+              demolink={project.links.site}
+              repoLink={project.links.repo}
+            ></ProjectCard>
+          </Link>
         ))}
       </ul>
     </div>
