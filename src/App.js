@@ -11,7 +11,7 @@ import ReactSwitch from "react-switch";
 
 import { Route, Routes } from "react-router-dom";
 import { useTheme } from "./components/context/ThemeContextProvider";
-import ProjectCard from "./components/projects/ProjectCard";
+import ProjectPage from "./components/projects/ProjectPage";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -21,14 +21,14 @@ const App = () => {
     <div className="App" id={theme}>
       <Navbar />
       <div className="switch">
-        <ReactSwitch onChange={toggleTheme} checked={theme === "Dark"} />
+        <ReactSwitch onChange={toggleTheme} checked={theme === "Light"} />
       </div>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/resume" element={<Resume />}></Route>
-        <Route path="/project/:id" element={<ProjectCard />}></Route>
+        <Route path="/project/:id" element={<ProjectPage />}></Route>
       </Routes>
       <Footer />
     </div>
