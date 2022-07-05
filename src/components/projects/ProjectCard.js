@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProjectCard.css";
-import { Link } from "react-router-dom";
+
 
 const ProjectCard = ({
   name,
@@ -9,24 +9,20 @@ const ProjectCard = ({
   repoLink,
   demoLink,
   imgalt,
-  id,
 }) => {
   return (
     <li>
       <div className="project">
-        <Link to={`/project/${id}`}>
-          <img src={img} alt={imgalt} />
-          </Link>
-          <h3>{name}</h3>
-          <p>{descritpion}</p>
-        
+        <img src={img} alt={imgalt} />
+        <h3>{name}</h3>
+        <p>{descritpion}</p>
         <div className="project-buttons">
-          <button>
+         {/*  <button>
             <a href={repoLink}>REPO</a>
           </button>
           <button>
             <a href={demoLink}>DEMO</a>
-          </button>
+          </button> */}
         </div>
       </div>
     </li>

@@ -3,9 +3,23 @@ const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 const clientId = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
 const clientSecret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
-const refreshToken = prcess.env.REACT_APP_SPOTIFY_REFRESH_TOKEN;
+const refreshToken = process.env.REACT_APP_SPOTIFY_REFRESH_TOKEN;
 
 const getAccessToken = async () => {
-    const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
-    console.log(basic)
-}
+  const basic = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
+  
+  const response = await fetch(TOKEN_ENDPOINT, {
+    
+    method: 'POST', 
+    headers: {
+        Authorization: `Basic ${basic}`,
+            "Content-Type": "application/x-www-form-urlencoded",
+    }, 
+    body: querystring.stringify({
+        grant_type: "refreshToken",
+        refreshToken,
+    })
+  })
+
+  return response.json();
+};

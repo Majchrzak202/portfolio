@@ -25,9 +25,9 @@ const Home = () => {
                 transition={{
                   repeat: Infinity,
                   repeatType: "reverse",
-                  repeatDelay: 0.1,
-                  from: 0,
-                  duration: 12,
+                  repeatDelay: 1,
+                  from: 1,
+                  duration: 1,
                   ease: "easeInOut",
                   type: "tween",
                 }}
