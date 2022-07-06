@@ -7,21 +7,21 @@ import Projects from "./components/Pages/Projects";
 import About from "./components/Pages/About";
 
 import "./App.css";
-import ReactSwitch from "react-switch";
+
 
 import { Route, Routes } from "react-router-dom";
 import { useTheme } from "./components/context/ThemeContextProvider";
 import ProjectPage from "./components/projects/ProjectPage";
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   console.log(theme);
 
   return (
     <div className="App" id={theme}>
       <Navbar />
       <div className="switch">
-        <ReactSwitch onChange={toggleTheme} checked={theme === "Light"} />
+        
       </div>
       <Routes>
         <Route path="/" element={<Home />}></Route>
