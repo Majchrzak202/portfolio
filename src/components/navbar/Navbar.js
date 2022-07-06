@@ -1,9 +1,13 @@
 import React, {useState} from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import ReactSwitch from "react-switch";
+import { useTheme } from "../context/ThemeContextProvider";
 
 const Navbar = () => {
   const [navExpanded, setNavExpanded] = useState(false)
+  const {theme, toggleTheme} = useTheme()
+
 
   return (
     <nav className="navbar">
@@ -31,8 +35,10 @@ const Navbar = () => {
           <li><Link to='/about'>About</Link></li>
           <li><Link to='/projects'>Projects</Link></li>
           <li><Link to='/resume'>Resume</Link></li> 
+          <li><ReactSwitch onChange={toggleTheme} checked={theme === "Light"} /></li>
           
         </ul>
+        
       </div>
     </nav>
   );
