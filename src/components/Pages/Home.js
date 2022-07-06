@@ -18,23 +18,21 @@ const Home = () => {
         <div>
           <h3>
             Hi there{" "}
-            <span>
-              <motion.div
-                className="hand"
-                animate={{ rotate: 15 }}
-                transition={{
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  repeatDelay: 1,
-                  from: 1,
-                  duration: 1,
-                  ease: "easeInOut",
-                  type: "tween",
-                }}
-              >
-                👋
-              </motion.div>
-            </span>
+            <motion.div
+              className="hand"
+              animate={{ rotate: 15 }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "reverse",
+                repeatDelay: 1,
+                from: 1,
+                duration: 1,
+                ease: "easeInOut",
+                type: "tween",
+              }}
+            >
+              👋
+            </motion.div>
           </h3>
 
           <h3>I'm Marcin Łuba</h3>
@@ -88,8 +86,8 @@ const Home = () => {
           <p>Spotify plugin</p>
         </div>
         <div>
-          <IconButton onClick={scrollUpHandler} fontSize='medium'>
-            <ArrowUpward/>
+          <IconButton onClick={scrollUpHandler} fontSize="medium">
+            <ArrowUpward />
           </IconButton>
         </div>
       </div>
