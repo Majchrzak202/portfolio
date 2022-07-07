@@ -8,7 +8,6 @@ import About from "./components/Pages/About";
 
 import "./App.css";
 
-
 import { Route, Routes } from "react-router-dom";
 import { useTheme } from "./components/context/ThemeContextProvider";
 import ProjectPage from "./components/projects/ProjectPage";
@@ -20,9 +19,7 @@ const App = () => {
   return (
     <div className="App" id={theme}>
       <Navbar />
-      <div className="switch">
-        
-      </div>
+      <div className="switch"></div>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
