@@ -1,10 +1,12 @@
 import React from "react";
-import './Footer.css'
+import "./Footer.css";
+import { useTheme } from "../context/ThemeContextProvider";
 
 const Footer = () => {
+  const { theme } = useTheme();
   return (
-    <div className="footer">
-      <div className="credits" >
+    <div id={theme} className="footer">
+      <div className="credits">
         <p>Copyright luba.dev 2022</p>
       </div>
       <div className="socials">

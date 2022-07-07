@@ -1,16 +1,15 @@
 .navbar {
-  min-height: 10vh;
+  max-height: 8vh;
   width: 100%;
   display: flex;
   align-items: center;
   position: fixed;
   background-color: rgba(98, 0, 238, 255);
   padding: 0.5rem 0rem;
-  color: white;
 }
 
-#Light {
-  background-color: rgb(242, 244, 246);
+#Light .navbar {
+  background-color: rgba(98, 0, 238, 255);
 }
 
 #Dark .navbar {
@@ -43,7 +42,7 @@
   text-decoration: none;
 }
 
-.hamburger {
+#Light .hamburger {
   height: 30px;
   width: 30px;
   border: 0;

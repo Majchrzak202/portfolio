@@ -1,20 +1,22 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import ReactSwitch from "react-switch";
 import { useTheme } from "../context/ThemeContextProvider";
 
 const Navbar = () => {
-  const [navExpanded, setNavExpanded] = useState(false)
-  const {theme, toggleTheme} = useTheme()
-
+  const [navExpanded, setNavExpanded] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="navbar">
+    <nav id={theme} className="navbar">
       <img className="brand" alt="1" />
-      <button onClick={() => {
-        setNavExpanded(!navExpanded)
-      }} className="hamburger">
+      <button
+        onClick={() => {
+          setNavExpanded(!navExpanded);
+        }}
+        className="hamburger"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -27,18 +29,25 @@ const Navbar = () => {
             clipRule="evenodd"
           />
         </svg>
-    
       </button>
-      <div className={ navExpanded ? 'nav-menu expanded' : 'nav-menu'}>
+      <div className={navExpanded ? "nav-menu expanded" : "nav-menu"}>
         <ul>
-            <li><Link to='/'>Home</Link></li>
-          <li><Link to='/about'>About</Link></li>
-          <li><Link to='/projects'>Projects</Link></li>
-          <li><Link to='/resume'>Resume</Link></li> 
-          <li><ReactSwitch onChange={toggleTheme} checked={theme === "Light"} /></li>
-          
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link to="/resume">Resume</Link>
+          </li>
+          <li>
+            <ReactSwitch onChange={toggleTheme} checked={theme === "Light"} />
+          </li>
         </ul>
-        
       </div>
     </nav>
   );
