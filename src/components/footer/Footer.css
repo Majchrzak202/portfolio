@@ -1,3 +1,11 @@
+#Light .footer {
+    background-color: rgba(98, 0, 238, 255);
+}
+
+#Dark .footer {
+    background-color: rgba(31, 31, 31, 255);
+}
+
 .footer {
     display: flex;
     min-height: 10vh;
@@ -7,6 +15,7 @@
     align-items: center;
     text-align: center;
     background-color: hsla(0, 100%, 60%, 0.15);
+    color: white
 }
 
 .credits {
