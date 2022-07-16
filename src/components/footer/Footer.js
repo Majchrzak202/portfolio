@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { useTheme } from "../context/ThemeContextProvider";
+import SocialIcons from "../socialIcons/SocialIcons";
 
 const Footer = () => {
   const { theme } = useTheme();
@@ -9,24 +10,7 @@ const Footer = () => {
       <div className="credits">
         <p>Copyright luba.dev 2022</p>
       </div>
-      <div className="socials">
-        <img
-          src="https://www.iconsdb.com/icons/preview/icon-sets/sketchy-blue/twitter-xl.png"
-          alt="2"
-        />
-        <img
-          src="https://www.iconsdb.com/icons/preview/icon-sets/sketchy-blue/twitter-xl.png"
-          alt="3"
-        />
-        <img
-          src="https://www.iconsdb.com/icons/preview/icon-sets/sketchy-blue/twitter-xl.png"
-          alt="4"
-        />
-        <img
-          src="https://www.iconsdb.com/icons/preview/icon-sets/sketchy-blue/twitter-xl.png"
-          alt="5"
-        />
-      </div>
+      <SocialIcons/>
     </div>
   );
 };
