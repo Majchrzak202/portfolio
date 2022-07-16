@@ -1,56 +1,133 @@
 import React, { useState } from "react";
-import "./Navbar.css";
-import { Link } from "react-router-dom";
+import {
+  Menu,
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Container,
+  Button,
+  MenuItem,
+} from "@mui/material";
+
 import ReactSwitch from "react-switch";
 import { useTheme } from "../context/ThemeContextProvider";
 
+import { Menu as MenuIcon } from "@material-ui/icons";
+import { AllInclusive } from "@material-ui/icons";
+import useStyles from "./Styles";
+
+const pages = ["Projects", "About", "Home", "Resume"];
+
 const Navbar = () => {
-  const [navExpanded, setNavExpanded] = useState(false);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const classes = useStyles();
   const { theme, toggleTheme } = useTheme();
 
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
   return (
-    <nav id={theme} className="navbar">
-      <img className="brand" alt="1" />
-      <button
-        onClick={() => {
-          setNavExpanded(!navExpanded);
-        }}
-        className="hamburger"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          viewBox="0 0 20 20"
-          fill="white"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
-      <div className={navExpanded ? "nav-menu expanded" : "nav-menu"}>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link to="/resume">Resume</Link>
-          </li>
-          <li>
+    <div className={classes.appbar}>
+    <AppBar  id={theme} position="fixed">
+      <Container maxWidth="xl">
+        <Toolbar className={classes.toolbar} disableGutters>
+          <AllInclusive sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <Typography
+            variant="h6"
+            noWrap
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".1.5rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            ML.DEV
+          </Typography>
+
+          <Typography
+            variant="h5"
+            noWrap
+            sx={{
+              mr: 2,
+              display: { xs: "flex", md: "none" },
+              flexGrow: 1,
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".1.5rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            ML.DEV
+          </Typography>
+
+          <div className={classes.grow} />
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          <Box>
             <ReactSwitch onChange={toggleTheme} checked={theme === "Light"} />
-          </li>
-        </ul>
-      </div>
-    </nav>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+    </div>
   );
 };
-
 export default Navbar;
