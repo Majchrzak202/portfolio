@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Resume from "./components/Pages/Resume";
 import Projects from "./components/Pages/Projects";
 import About from "./components/Pages/About";
+import NewNabra from "./components/navbar/NewNabra";
 
 import "./App.css";
 
@@ -18,7 +19,7 @@ const App = () => {
 
   return (
     <div className="App" id={theme}>
-      <Navbar />
+      <NewNabra/>
       <div className="switch"></div>
       <Routes>
         <Route path="/" element={<Home />}></Route>
