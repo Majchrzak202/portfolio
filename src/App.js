@@ -1,11 +1,10 @@
 import React from "react";
-import Navbar from "./components/navbar/Navbar";
 import Home from "./components/Pages/Home";
 import Footer from "./components/footer/Footer";
 import Resume from "./components/Pages/Resume";
 import Projects from "./components/Pages/Projects";
 import About from "./components/Pages/About";
-import NewNabra from "./components/navbar/NewNabra";
+import Navbar from "./components/navbar/Navbar";
 
 import "./App.css";
 
@@ -15,12 +14,10 @@ import ProjectPage from "./components/projects/ProjectPage";
 
 const App = () => {
   const { theme } = useTheme();
-  console.log(theme);
 
   return (
     <div className="App" id={theme}>
-      <NewNabra/>
-      <div className="switch"></div>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
