@@ -3,6 +3,7 @@ import "./Home.css";
 import { motion } from "framer-motion";
 import { ArrowUpward } from "@material-ui/icons";
 import { IconButton } from "@material-ui/core";
+import SocialIcons from "../socialIcons/SocialIcons";
 
 const Home = () => {
   const scrollUpHandler = () => {
@@ -62,26 +63,8 @@ const Home = () => {
             />
           </div>
         </div>
-        <div>
-          <h5>Feel free to contact me</h5>
-          <p>COnect with me </p>
-          <img
-            src="https://www.iconsdb.com/icons/preview/icon-sets/sketchy-blue/twitter-xl.png"
-            alt="2"
-          />
-          <img
-            src="https://www.iconsdb.com/icons/preview/icon-sets/sketchy-blue/twitter-xl.png"
-            alt="3"
-          />
-          <img
-            src="https://www.iconsdb.com/icons/preview/icon-sets/sketchy-blue/twitter-xl.png"
-            alt="4"
-          />
-          <img
-            src="https://www.iconsdb.com/icons/preview/icon-sets/sketchy-blue/twitter-xl.png"
-            alt="5"
-          />
-        </div>
+        <h3>Feel free to Contact me!</h3>
+       <SocialIcons/>
         <div>
           <p>Spotify plugin</p>
         </div>
