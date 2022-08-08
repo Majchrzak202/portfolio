@@ -31,13 +31,4 @@
   text-align: center;
 }
 
-.project-buttons {
-  display: flex;
-  min-width: 20vw;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
-.project-buttons a {
-  text-decoration: none;
-}
