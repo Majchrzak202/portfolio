@@ -46,25 +46,22 @@ const Home = () => {
       </div>
       <div className="connect">
         <div className="shortinfo">
-          <div className="shortinfo-text">
-            <h3>LET ME INTRODUCE MYSELF</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libedddro vitae erat. Aenean faucibus nibh et justo cursus id
-              rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
-            </p>
-          </div>
-          <div>
-            <img
-              src="https://s.yimg.com/ny/api/res/1.2/6qMJ83mGqwEKCatiC1wLBQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03NDk-/https://s.yimg.com/os/creatr-uploaded-images/2021-02/572c4830-721d-11eb-bb63-96959c3b62f2"
-              alt="6"
-            />
-          </div>
+          <h3>LET ME INTRODUCE MYSELF</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libedddro
+            vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+            imperdiet. Nunc ut sem vitae risus tristique posuere.
+          </p>
+
+          <img
+            src="https://s.yimg.com/ny/api/res/1.2/6qMJ83mGqwEKCatiC1wLBQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03NDk-/https://s.yimg.com/os/creatr-uploaded-images/2021-02/572c4830-721d-11eb-bb63-96959c3b62f2"
+            alt="6"
+          />
         </div>
         <h3>Feel free to Contact me!</h3>
-       <SocialIcons/>
+        <SocialIcons />
         <div>
           <p>Spotify plugin</p>
         </div>
