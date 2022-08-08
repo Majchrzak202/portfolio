@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Typography, Box } from "@material-ui/core";
+import { Button, Box } from "@material-ui/core";
 import { GitHub, LinkedIn, Email, Instagram } from "@material-ui/icons";
 
 const SocialIcons = () => {
