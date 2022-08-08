@@ -82,7 +82,7 @@ const Navbar = () => {
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Button
-                  key={page}
+                  key={Math.random()}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "blue", display: "block" }}
                 >
@@ -121,7 +121,7 @@ const Navbar = () => {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={Math.random()} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
