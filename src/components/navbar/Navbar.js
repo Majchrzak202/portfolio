@@ -20,10 +20,18 @@ import useStyles from "./Styles";
 import { Link } from "react-router-dom";
 
 const pages = [
-  <Link to="/">Home</Link>,
-  <Link to="/about">About</Link>,
-  <Link to="/projects">Projects</Link>,
-  <Link to="/resume">Resume</Link>,
+  <Link style={{ color: "white" }} to="/">
+    Home
+  </Link>,
+  <Link style={{ color: "white" }} to="/about">
+    About
+  </Link>,
+  <Link style={{ color: "white" }} to="/projects">
+    Projects
+  </Link>,
+  <Link style={{ color: "white" }} to="/resume">
+    Resume
+  </Link>,
 ];
 
 const Navbar = () => {
@@ -45,21 +53,23 @@ const Navbar = () => {
         <Container maxWidth="xl">
           <Toolbar className={classes.toolbar} disableGutters>
             <AllInclusive sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".1.5rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              ML.DEV
-            </Typography>
+            <Link style={{ color: "white" }} color to="/">
+              <Typography
+                variant="h6"
+                noWrap
+                sx={{
+                  mr: 2,
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".1.5rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                ML.DEV
+              </Typography>
+            </Link>
 
             <Typography
               variant="h5"
@@ -83,8 +93,9 @@ const Navbar = () => {
               {pages.map((page) => (
                 <Button
                   key={Math.random()}
+                  className={classes.button}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "blue", display: "block" }}
+                  sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}
                 </Button>
@@ -122,7 +133,13 @@ const Navbar = () => {
               >
                 {pages.map((page) => (
                   <MenuItem key={Math.random()} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography
+                      style={{ textDecoration: "none" }}
+                      textAlign="center"
+                      variant="inherit"
+                    >
+                      {page}
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>

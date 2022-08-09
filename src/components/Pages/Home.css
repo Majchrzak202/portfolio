@@ -1,3 +1,5 @@
+
+
 .home {
   min-height: 80vh;
   width: 100%;
@@ -64,6 +66,8 @@
   justify-content: center;
   align-items: center;
   background-color: hsla(0, 19.21%, 93.4%, 0.28);
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .shortinfo {

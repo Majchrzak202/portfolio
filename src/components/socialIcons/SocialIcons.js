@@ -1,21 +1,26 @@
 import React from "react";
 import { Button, Box } from "@material-ui/core";
 import { GitHub, LinkedIn, Email, Instagram } from "@material-ui/icons";
+import { useTheme } from "../context/ThemeContextProvider";
+import useStyles from "./Styles";
 
 const SocialIcons = () => {
+  const { theme } = useTheme();
+  const classes = useStyles();
+
   return (
-    <Box>
+    <Box className={classes.socialIcons}>
       <Button>
-        <GitHub />
+        <GitHub id={theme} />
       </Button>
       <Button>
-        <LinkedIn />
+        <LinkedIn id={theme} />
       </Button>
       <Button>
-        <Email />
+        <Email id={theme} />
       </Button>
       <Button>
-        <Instagram />
+        <Instagram id={theme} />
       </Button>
     </Box>
   );

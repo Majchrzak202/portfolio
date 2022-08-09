@@ -15,7 +15,10 @@
     align-items: center;
     text-align: center;
     background-color: hsla(0, 100%, 60%, 0.15);
-    color: white
+    color: white;
+    border-top-color: black;
+    border-top: 2px;
+    
 }
 
 .credits {
