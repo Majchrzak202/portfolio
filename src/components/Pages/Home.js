@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { ArrowUpward } from "@material-ui/icons";
 import { IconButton } from "@material-ui/core";
 import SocialIcons from "../socialIcons/SocialIcons";
+import { useTheme } from "../context/ThemeContextProvider";
 
 const Home = () => {
+  const {theme} = useTheme()
   const scrollUpHandler = () => {
     window.scrollTo({
       top: 0,
@@ -15,17 +17,17 @@ const Home = () => {
 
   return (
     <>
-      <div className="home">
+      <div className="home" id={theme}>
         <div>
           <h3>
             Hi there{" "}
             <motion.div
               className="hand"
-              animate={{ rotate: 15 }}
+              animate={{ rotate: 50 }}
               transition={{
                 repeat: Infinity,
                 repeatType: "reverse",
-                repeatDelay: 1,
+                repeatDelay: 0.7,
                 from: 1,
                 duration: 1,
                 ease: "easeInOut",
@@ -44,7 +46,7 @@ const Home = () => {
           alt="2"
         />
       </div>
-      <div className="connect">
+      <div className="connect" id={theme}>
         <div className="shortinfo">
           <h3>LET ME INTRODUCE MYSELF</h3>
           <p>
