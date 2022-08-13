@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="credits">
         <p>Copyright luba.dev 2022</p>
       </div>
-      <SocialIcons/>
+      <SocialIcons />
     </div>
   );
 };
