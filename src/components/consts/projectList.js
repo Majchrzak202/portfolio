@@ -14,12 +14,13 @@ export const PROJECTS = [
 
   {
     id: 2,
-    title: "Second best App",
-    descritpion: "This is the coolest app ever made",
-    img: "https://ui-lib.com/blog/wp-content/uploads/2022/04/john-minimal-one-page-1.png",
+    title: "Beer Search App",
+    descritpion: "Beer Search React App",
+    longDescritption: 'Beer App build with React, Material UI and CSS. It uses punkapi to fetch Beers. I have used here React Router, Lazy Loading, Loading Spinnder made with MUI.Ive also leveraged custom Hook for contact form validation. In this project i also used useEffect, useState and other core React features.  ',
+    img: "https://i.ibb.co/2jQj3bt/Screenshot-2022-08-12-at-18-20-35.png",
     links: {
-      site: "https://weather-app-deploy-hosting.web.app/",
-      repo: "https://github.com/Majchrzak202/ForecastApp-/tree/master",
+      site: "https://beerworldapp.web.app/",
+      repo: "https://github.com/Majchrzak202/beer-app",
     },
   },
 
