@@ -25,12 +25,7 @@
     margin-left: 10px;
 }
 
-.socials{
-    margin-right: 10px;
-}
-
-.socials img {
-    width: 30px;
-    height: 30px;
+.socials {
+    background-color: rgba(98, 0, 238, 255);
 }
 

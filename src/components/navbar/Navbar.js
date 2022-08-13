@@ -19,21 +19,6 @@ import { AllInclusive } from "@material-ui/icons";
 import useStyles from "./Styles";
 import { Link } from "react-router-dom";
 
-const pages = [
-  <Link style={{ color: "white" }} to="/">
-    Home
-  </Link>,
-  <Link style={{ color: "white" }} to="/about">
-    About
-  </Link>,
-  <Link style={{ color: "white" }} to="/projects">
-    Projects
-  </Link>,
-  <Link style={{ color: "white" }} to="/resume">
-    Resume
-  </Link>,
-];
-
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const classes = useStyles();
@@ -47,13 +32,28 @@ const Navbar = () => {
     setAnchorElNav(null);
   };
 
+  const pages = [
+    <Link id={theme} to="/">
+      Home
+    </Link>,
+    <Link id={theme} to="/about">
+      About
+    </Link>,
+    <Link id={theme} to="/projects">
+      Projects
+    </Link>,
+    <Link id={theme} to="/resume">
+      Resume
+    </Link>,
+  ];
+
   return (
     <div className={classes.appbar}>
       <AppBar id={theme} position="fixed">
         <Container maxWidth="xl">
           <Toolbar className={classes.toolbar} disableGutters>
             <AllInclusive sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Link style={{ color: "white" }} color to="/">
+            <Link  to="/">
               <Typography
                 variant="h6"
                 noWrap
@@ -63,7 +63,7 @@ const Navbar = () => {
                   fontFamily: "monospace",
                   fontWeight: 700,
                   letterSpacing: ".1.5rem",
-                  color: "inherit",
+                  color: "white",
                   textDecoration: "none",
                 }}
               >
@@ -93,9 +93,8 @@ const Navbar = () => {
               {pages.map((page) => (
                 <Button
                   key={Math.random()}
-                  className={classes.button}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, display: "block", color: "yellow" }}
                 >
                   {page}
                 </Button>
@@ -114,6 +113,7 @@ const Navbar = () => {
                 <MenuIcon />
               </IconButton>
               <Menu
+                className={classes.mobilemenu}
                 id="menu-appbar"
                 anchorEl={anchorElNav}
                 anchorOrigin={{
