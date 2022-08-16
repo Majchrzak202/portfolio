@@ -11,8 +11,6 @@ const ProjectPage = () => {
   const demoLink = PROJECTS[id - 1].links.site;
   const repoLink = PROJECTS[id - 1].links.repo;
 
-  console.log(longDescritption)
-
   return (
     <div className="projectpage">
       <h2>{title}</h2>
