@@ -1,18 +1,40 @@
-import React from "react";
-import "./Resume.css";
-import { Document, pdfjs } from "react-pdf";
+import React, { useState } from "react";
+import "./ResumeStyles.js";
+import { Document, Page, pdfjs } from "react-pdf";
 import ResumePDF from "./../../assets/Resume.pdf";
+import Button from "@mui/material/Button";
+import useStyles from "./ResumeStyles.js";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+/* pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+ */
 
 const Resume = () => {
-  console.log(ResumePDF);
-  return <div className="resume">
-    <Document file={ResumePDF}>
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+  const classes = useStyles();
 
-    </Document>
-  </div>;
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
+  return (
+    <div className={classes.resume}>
+      <h2>Download Resume</h2>
+      <Button
+        sx={{
+          backgroundColor: "#6200ee",
+          marginBottom: "30px",
+        }}
+        variant="contained"
+      >
+        DOWNLOAD PDF
+      </Button>
+      <Document file={ResumePDF} onLoadSuccess={onDocumentLoadSuccess}>
+        <Page pageNumber={pageNumber} />
+      </Document>
+    </div>
+  );
 };
 
 export default Resume;
