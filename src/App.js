@@ -3,6 +3,7 @@ import React, { lazy, Suspense } from "react";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
+import HomeSecond from "./components/Pages/HomeSecond";
 
 import "./App.css";
 
@@ -23,7 +24,8 @@ const App = () => {
       <Navbar />
       <Suspense fallback={<LoadingSpinner/>}>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          
+          <Route path="/" element={<HomeSecond />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
           <Route path="/resume" element={<Resume />}></Route>
