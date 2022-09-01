@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <div className={classes.appbar}>
-      <AppBar id={theme} position="fixed">
+      <AppBar  id={theme}  position="fixed">
         <Container maxWidth="xl">
           <Toolbar className={classes.toolbar} disableGutters>
             <AllInclusive sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />

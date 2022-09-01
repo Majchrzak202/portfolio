@@ -5,9 +5,7 @@ import ResumePDF from "./../../assets/Resume.pdf";
 import Button from "@mui/material/Button";
 import useStyles from "./ResumeStyles.js";
 
-/* pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
- */
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const Resume = () => {
   const [numPages, setNumPages] = useState(null);
@@ -28,7 +26,12 @@ const Resume = () => {
         }}
         variant="contained"
       >
-        DOWNLOAD PDF
+        <a
+          href="https://github.com/Majchrzak202/portfolio/raw/master/src/assets/Resume.pdf"
+          download
+        >
+          DOWNLOAD PDF
+        </a>
       </Button>
       <Document file={ResumePDF} onLoadSuccess={onDocumentLoadSuccess}>
         <Page pageNumber={pageNumber} />
