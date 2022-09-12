@@ -6,18 +6,18 @@ const useStyles = makeStyles({
       backgroundColor: "rgba(98, 0, 238, 255)",
     },
     "& #Dark": {
-      backgroundColor: "rgba(31, 31, 31, 255)",
+      backgroundColor: "rgba(40,48,62,255)",
     },
   },
   toolbar: {
-    "& #Light": {
+     "& #Light": {
       color: "white",
-      backgroundColor: "rgba(98, 0, 238, 255)"
+      
     },
     "& #Dark": {
       color: "white",
-      backgroundColor: "rgba(31, 31, 31, 255)",
-    },
+      
+    }, 
     display: "flex",
     justifyContent: "space-between",
    

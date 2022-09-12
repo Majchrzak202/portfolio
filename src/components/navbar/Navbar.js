@@ -10,6 +10,7 @@ import {
   Button,
   MenuItem,
 } from "@mui/material";
+import Logo from "./../../assets/Logo.png";
 
 import ReactSwitch from "react-switch";
 import { useTheme } from "../context/ThemeContextProvider";
@@ -49,44 +50,18 @@ const Navbar = () => {
 
   return (
     <div className={classes.appbar}>
-      <AppBar  id={theme}  position="fixed">
+      <AppBar id={theme} position="fixed">
         <Container maxWidth="xl">
           <Toolbar className={classes.toolbar} disableGutters>
-            <AllInclusive sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Link  to="/">
-              <Typography
-                variant="h6"
-                noWrap
-                sx={{
-                  mr: 2,
-                  display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
-                  fontWeight: 700,
-                  letterSpacing: ".1.5rem",
-                  color: "white",
-                  textDecoration: "none",
-                }}
-              >
-                ML.DEV
-              </Typography>
+            <Link to="/">
+              <img
+                src={Logo}
+                alt="logo"
+                style={{ width: "200px", height: "50px" }}
+              />
             </Link>
 
-            <Typography
-              variant="h5"
-              noWrap
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".1.5rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              ML.DEV
-            </Typography>
+            
 
             <div className={classes.grow} />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
