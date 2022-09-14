@@ -2,8 +2,11 @@ import React from "react";
 import { PROJECTS } from "../consts/projectList";
 import { useParams } from "react-router-dom";
 import "./ProjectPage.css";
+import { Button } from "@material-ui/core";
+import { useTheme } from "../context/ThemeContextProvider";
 const ProjectPage = () => {
   const { id } = useParams();
+  const { theme } = useTheme();
 
   const title = PROJECTS[id - 1].title;
   const img = PROJECTS[id - 1].img;
@@ -17,12 +20,23 @@ const ProjectPage = () => {
       <img alt={id} src={img} />
       <p>{longDescritption}</p>
       <div className="project-buttons">
-        <button>
-          <a href={repoLink}>REPO</a>
-        </button>
-        <button>
-          <a href={demoLink}>DEMO</a>
-        </button>
+        <Button
+          style={{ backgroundColor: "rgba(40,48,62,255)", color: "white" }}
+          size="medium"
+          variant="contained"
+          href={repoLink}
+        >
+          REPO
+        </Button>
+
+        <Button
+          style={{ backgroundColor: "rgba(40,48,62,255)", color: "white" }}
+          size="medium"
+          variant="contained"
+          href={demoLink}
+        >
+          DEMO
+        </Button>
       </div>
     </div>
   );
