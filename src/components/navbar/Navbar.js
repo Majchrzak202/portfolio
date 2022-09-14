@@ -9,14 +9,11 @@ import {
   Container,
   Button,
   MenuItem,
+  Switch,
 } from "@mui/material";
 import Logo from "./../../assets/Logo.png";
-
-import ReactSwitch from "react-switch";
 import { useTheme } from "../context/ThemeContextProvider";
-
 import { Menu as MenuIcon } from "@material-ui/icons";
-import { AllInclusive } from "@material-ui/icons";
 import useStyles from "./Styles";
 import { Link } from "react-router-dom";
 
@@ -60,8 +57,6 @@ const Navbar = () => {
                 style={{ width: "200px", height: "50px" }}
               />
             </Link>
-
-            
 
             <div className={classes.grow} />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -120,7 +115,7 @@ const Navbar = () => {
               </Menu>
             </Box>
             <Box>
-              <ReactSwitch onChange={toggleTheme} checked={theme === "Light"} />
+              <Switch onChange={toggleTheme}></Switch>
             </Box>
           </Toolbar>
         </Container>
