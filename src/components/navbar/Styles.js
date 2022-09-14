@@ -10,38 +10,31 @@ const useStyles = makeStyles({
     },
   },
   toolbar: {
-     "& #Light": {
+    "& #Light": {
       color: "white",
-      
     },
     "& #Dark": {
       color: "white",
-      
-    }, 
+    },
     display: "flex",
     justifyContent: "space-between",
-   
   },
   grow: {
     flexGrow: 1,
   },
 
-  
   mobilemenu: {
     "& #Light": {
       color: "black",
-      backgroundColor: 'white',
-      textDecoration: 'none' 
-      
-      
+      backgroundColor: "white",
+      textDecoration: "none",
     },
     "& #Dark": {
-      color: 'black',
-      backgroundColor: 'white',
-      textDecoration: 'none'
+      color: "black",
+      backgroundColor: "white",
+      textDecoration: "none",
     },
-  }
-  
+  },
 });
 
 export default useStyles;

@@ -1,3 +1,12 @@
+#Light .projectpage {
+    background-color: rgb(242, 244, 246);
+}
+
+#Dark .projectpage {
+    background-color: black;
+}
+
+
 .projectpage {
     display: flex;
     flex-direction: column;

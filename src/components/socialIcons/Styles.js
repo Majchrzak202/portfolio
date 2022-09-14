@@ -4,7 +4,8 @@ const useStyles = makeStyles({
   socialIcons: {
     "& #Light": {
       fill: 'black',
-      backgroundColor:'rgba(251, 251, 251, 0);'
+      backgroundColor:'rgba(251, 251, 251, 0);',
+      
       
     },
     "& #Dark": {
