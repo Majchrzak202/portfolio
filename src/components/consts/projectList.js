@@ -26,12 +26,13 @@ export const PROJECTS = [
 
   {
     id: 3,
-    title: "Outstanding App",
-    descritpion: "This is the coolest app ever made",
-    img: "https://ui-lib.com/blog/wp-content/uploads/2022/04/john-minimal-one-page-1.png",
+    title: "Financial Portfolio",
+    descritpion: "Customer Project",
+    longDescritption: 'Customer Project of Financial Portfolio made with pure React. It is mainly designed with Material UI. It provides a functional Contact Form integrated with EmailJS. It uses React Router.  ',
+    img: "https://i.ibb.co/kxLBbkL/Screenshot-2022-09-14-at-08-26-04.png",
     links: {
-      site: "",
-      repo: "",
+      site: "https://joannafilip-finanse.web.app/",
+      repo: "https://github.com/Majchrzak202/creditofficersite",
     },
   },
 ];
