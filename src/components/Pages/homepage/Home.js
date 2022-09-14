@@ -1,78 +1,13 @@
 import React from "react";
-import { Grid, Typography, CardMedia, Card } from "@material-ui/core";
-import MainPhoto from "./../../assets/MainPhoto.png";
+import { Grid, Typography, Box } from "@material-ui/core";
+import MainPhoto from "./../../../assets/MainPhoto.png";
 import { motion } from "framer-motion";
-import { makeStyles } from "@material-ui/core";
-import { useTheme } from "../context/ThemeContextProvider";
+import useStyles from "./Styles";
+import { useTheme } from "../../context/ThemeContextProvider";
 import { TypeAnimation } from "react-type-animation";
+import SocialIcons from "../../socialIcons/SocialIcons";
 
-const useStyles = makeStyles((theme) => ({
-  main: {
-    minHeight: "80vh",
-    minWidth: "100vw",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-  },
-  container: {
-    height: "80%",
-    width: "100%",
-    marginTop: "100px",
-    "& #Light": {
-      backgroundColor: "rgb(242, 244, 246)",
-    },
-    "& #Dark": {
-      backgroundColor: "black",
-    },
-  },
-  motionDiv: {
-    marginBottom: "30px",
-    marginLeft: "20px",
-    width: "60vw",
-    [theme.breakpoints.down("xs")]: {
-      width: "90vw",
-    },
-  },
-  item: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    
-  },
-  card: {
-    display: "flex",
-    alignItems: "flex-start",
-    justifyContent: "center",
-    height: "100%",
-    flexDirection: "column",
-    width: "100vw",
-    border: "none",
-    boxShadow: "none",
-    paddingLeft: "30px",
-  },
-
-  title: {
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    paddingBottom: "10px",
-    fontSize: "60px",
-    marginLeft: "20px",
-    fontWeight: 800,
-    fontStyle: "Open Sans",
-    textAlign: "left",
-  },
-
-  typeAnimation: {
-    fontSize: "40px",
-    fontStyle: "Open Sans",
-    fontWeight: 700,
-    marginLeft: "15px",
-  },
-}));
-
-const HomeSecond = () => {
+const Home = () => {
   const classes = useStyles();
   const { theme } = useTheme();
   return (
@@ -89,8 +24,8 @@ const HomeSecond = () => {
           xxl={8}
           item
         >
-          <Card id={theme} className={classes.card}>
-            <motion.div transition={{ duration: 0.5 }} animate={{ y: -60 }}>
+          <Box id={theme} className={classes.card}>
+            <motion.div transition={{ duration: 0.5 }} animate={{ y: -30 }}>
               <Typography
                 className={classes.title}
                 style={{
@@ -104,7 +39,9 @@ const HomeSecond = () => {
               >
                 Hi there
                 <motion.div
-                  style={{ paddingLeft: "10px" }}
+                  style={{
+                    paddingLeft: "10px",
+                  }}
                   animate={{ rotate: -20 }}
                   transition={{
                     repeat: Infinity,
@@ -147,11 +84,23 @@ const HomeSecond = () => {
                 repeat={Infinity}
                 className={classes.typeAnimation}
               />
-              <button style={{ margin: "50px" }}>
-                Feel free to Conect with me!
-              </button>
+              <h1
+                style={{
+                  fontSize: "20px",
+                  marginLeft: "20px",
+                  fontWeight: 800,
+                  fontStyle: "Open Sans",
+                  textAlign: "left",
+                  marginTop: "30px",
+                }}
+              >
+                Feel free to Conect with me:
+              </h1>
             </motion.div>
-          </Card>
+            <Box className={classes.socialBox}>
+              <SocialIcons />
+            </Box>
+          </Box>
         </Grid>
         <Grid
           style={{
@@ -166,20 +115,16 @@ const HomeSecond = () => {
           xxl={4}
           item
         >
-          <Card className={classes.imgCard} id={theme}>
-            <CardMedia className={classes.cardMedia}>
-              <img
-                className={classes.img}
-                style={{ height: "auto", width: "auto", padding: 'auto' }}
-                src={MainPhoto}
-                alt="123"
-              />
-            </CardMedia>
-          </Card>
+          <motion.div
+            transition={{ duration: 0.5 }}
+            animate={{ y: -40, x: -30 }}
+          >
+            <img className={classes.mainImage} src={MainPhoto} alt="Main" />
+          </motion.div>
         </Grid>
       </Grid>
     </div>
   );
 };
 
-export default HomeSecond;
+export default Home;
