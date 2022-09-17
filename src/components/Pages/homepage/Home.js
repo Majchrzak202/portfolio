@@ -6,6 +6,7 @@ import useStyles from "./Styles";
 import { useTheme } from "../../context/ThemeContextProvider";
 import { TypeAnimation } from "react-type-animation";
 import SocialIcons from "../../socialIcons/SocialIcons";
+import Github from "../../github-calendar/Github";
 
 const Home = () => {
   const classes = useStyles();
