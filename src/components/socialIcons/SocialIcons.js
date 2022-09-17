@@ -19,7 +19,7 @@ const SocialIcons = () => {
       <Button onClick={() => (window.location = "mailto:yourmail@domain.com")}>
         <Email id={theme} />
       </Button>
-      <Button href="https://www.instagram.com/cwaniakmentalny/" target="_blank">
+      <Button  href="https://www.instagram.com/cwaniakmentalny/" target="_blank">
         <Instagram id={theme} />
       </Button>
     </Box>
