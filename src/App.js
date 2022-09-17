@@ -6,16 +6,14 @@ import "./App.css";
 import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 
 import { Route } from "react-router-dom";
-import CustomRoutes from "./components/Pages/CustomRoutes";
+import CustomRoutes from './../src/components/Pages/CustomRoutes'
 
 import { useTheme } from "./components/context/ThemeContextProvider";
-/* import Resume from "./components/Pages/resume/Resume"; */
 
 const About = lazy(() => import("./components/Pages/about/About"));
 const Projects = lazy(() => import("./components/Pages/projects/Projects"));
- const Resume = lazy(() => import("./components/Pages/resume/Resume"));
+const Resume = lazy(() => import("./components/Pages/resume/Resume"));
 const ProjectPage = lazy(() => import("./components/projects/ProjectPage"));
-
 
 const App = () => {
   const { theme } = useTheme();
