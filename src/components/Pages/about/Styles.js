@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   },
   hobbies: {
     padding: "50px",
-    minHeight: "50vh",
+    minHeight: "auto",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
