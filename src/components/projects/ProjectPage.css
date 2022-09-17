@@ -1,42 +1,41 @@
 #Light .projectpage {
-    background-color: rgb(242, 244, 246);
+  background-color: rgb(242, 244, 246);
 }
 
 #Dark .projectpage {
-    background-color: black;
+  background-color: black;
 }
 
-
 .projectpage {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
 }
 
 .projectpage img {
-    width: 50%;
-    height: 50%;
-    border-radius: 5px;
+  width: 50%;
+  height: 50%;
+  border-radius: 5px;
 }
 
 .projectpage p {
-    margin-top: 20px ;
-    width: 45%;
-    text-align: justify
+  margin-top: 20px;
+  width: 45%;
+  text-align: justify;
 }
 
 .project-buttons {
-    display: flex;
-    min-width: 20vw;
-    min-height: 20vh;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .project-buttons a {
-    text-decoration: none;
-  }
+  display: flex;
+  min-width: 20vw;
+  min-height: 20vh;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-buttons a {
+  text-decoration: none;
+}
