@@ -10,7 +10,7 @@ const ProjectList = () => {
       container
       justifyContent="center"
       spacing={2}
-       style={{ padding: "5px" }}
+      style={{ padding: "5px" }}
     >
       {PROJECTS.map((project) => (
         <Grid key={project.id} item xs={12} sm={4} md={4} lg={4} xl={4}>
