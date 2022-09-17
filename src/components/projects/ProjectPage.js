@@ -3,10 +3,9 @@ import { PROJECTS } from "../consts/projectList";
 import { useParams } from "react-router-dom";
 import "./ProjectPage.css";
 import { Button } from "@material-ui/core";
-import { useTheme } from "../context/ThemeContextProvider";
+
 const ProjectPage = () => {
   const { id } = useParams();
-  const { theme } = useTheme();
 
   const title = PROJECTS[id - 1].title;
   const img = PROJECTS[id - 1].img;

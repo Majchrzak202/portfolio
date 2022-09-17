@@ -7,6 +7,8 @@ import Croatia from "./../../../assets/Croatia.png";
 import Skyrim from "./../../../assets/Skyrim.png";
 import { motion } from "framer-motion";
 import MainPhoto from "./../../../assets/MainPhoto.png";
+import Github from "../../github-calendar/Github";
+import MyStrength from "../../my-strength/MyStrength";
 
 const About = () => {
   const classes = useStyles();
@@ -56,7 +58,8 @@ const About = () => {
             </motion.div>
           </Grid>
         </Grid>
-
+        <MyStrength />
+        <Github />
         <motion.div transition={{ duration: 1.5 }} animate={{ y: -100 }}>
           <Box
             transition={{ duration: 1.5 }}
@@ -91,7 +94,7 @@ const About = () => {
               <Grid
                 className={classes.hobbieGrid}
                 xs={12}
-                sm={12}
+                sm={3}
                 md={3}
                 lg={3}
                 item
@@ -108,7 +111,7 @@ const About = () => {
               <Grid
                 className={classes.hobbieGrid}
                 xs={12}
-                sm={12}
+                sm={3}
                 md={3}
                 lg={3}
                 item
@@ -125,7 +128,7 @@ const About = () => {
               <Grid
                 className={classes.hobbieGrid}
                 xs={12}
-                sm={12}
+                sm={3}
                 md={3}
                 lg={3}
                 item
@@ -142,14 +145,14 @@ const About = () => {
               <Grid
                 className={classes.hobbieGrid}
                 xs={12}
-                sm={12}
+                sm={3}
                 md={3}
                 lg={3}
                 item
               >
                 <Box className={classes.hobbieBox}>
                   <img
-                    style={{ width: "70px", height: "50px" }}
+                    style={{ width: "80px", height: "50px" }}
                     src={Skyrim}
                     alt="Skyrim"
                   />

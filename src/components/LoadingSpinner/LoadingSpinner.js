@@ -1,6 +1,6 @@
 import React from "react";
 import { CircularProgress, Box } from "@material-ui/core";
-import './LoadingSpinner.css'
+import "./LoadingSpinner.css";
 
 const LoadingSpinner = () => {
   return (
