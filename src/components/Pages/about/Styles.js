@@ -7,6 +7,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     minHeight: "100vh",
     flexDirection: "column",
+    "& #Light": {
+      backgroundColor: "rgba(98, 0, 238, 100)",
+    },
+    "& #Dark": {
+      backgroundColor: "rgba(40,48,62,255)",
+    }, 
   },
   container: {
     marginTop: "200px",
@@ -50,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     width: "400px",
     height: "400px",
     borderRadius: "99%",
-    backgroundColor: "rgba(40,48,62,255)",
+    /* backgroundColor: "rgba(40,48,62,255)", */
     marginTop: "15px",
     [theme.breakpoints.down("xs")]: {
       width: "300px",
