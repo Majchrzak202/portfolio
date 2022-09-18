@@ -9,9 +9,11 @@ import { motion } from "framer-motion";
 import MainPhoto from "./../../../assets/MainPhoto.png";
 import Github from "../../github-calendar/Github";
 import MyStrength from "../../my-strength/MyStrength";
+import { useTheme } from "../../context/ThemeContextProvider";
 
 const About = () => {
   const classes = useStyles();
+  const {theme} = useTheme()
   return (
     <motion.div transition={{ duration: 0.5 }} animate={{ y: -100 }}>
       <Box
@@ -50,6 +52,7 @@ const About = () => {
             <motion.div transition={{ duration: 0.9 }} animate={{ y: -50 }}>
               <Box className={classes.photoBox}>
                 <img
+                id={theme}
                   className={classes.image}
                   src={MainPhoto}
                   alt="AboutPhoto"
