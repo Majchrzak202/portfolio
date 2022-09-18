@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography, Card } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
+import { useTheme } from "../context/ThemeContextProvider";
 
 const typography = [
   { description: "Interest in Blockchain and WEB 3.0 technology" },
@@ -15,6 +16,13 @@ const useStyles = makeStyles({
   main: {
     minHeight: "50vh",
     padding: "30px",
+    "& #Light": {
+      backgroundColor: "rgba(98, 0, 238, 255)",
+      color: 'white'
+    },
+    "& #Dark": {
+      backgroundColor: "rgba(40,48,62,255)",
+    },
   },
 
   card: {
@@ -23,12 +31,13 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: 'red'
+    backgroundColor: "red",
   },
 });
 
 const MyStrength = () => {
   const classes = useStyles();
+  const { theme } = useTheme();
 
   return (
     <div className={classes.main}>
@@ -45,14 +54,14 @@ const MyStrength = () => {
       <Grid spacing={3} container>
         {typography.map((item) => (
           <Grid
-            style={{ padding: "30px", width: "auto", height: "auto", }}
+            style={{ padding: "30px", width: "auto", height: "auto" }}
             xs={12}
             sm={4}
             md={4}
             lg={4}
             item
           >
-            <Card style={{backgroundColor: 'rgba(40,48,62,255)', color: 'white'}} className={classes.card}>
+            <Card className={classes.card} id={theme}>
               <Typography
                 style={{
                   fontWeight: 800,
