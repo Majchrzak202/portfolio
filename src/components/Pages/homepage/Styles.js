@@ -14,12 +14,12 @@ const useStyles = makeStyles((theme) => ({
     height: "80%",
     width: "100%",
     marginTop: "100px",
-    "& #Light": {
-      backgroundColor: "rgb(242, 244, 246)",
+     "& #Light": {
+      backgroundColor: "rgba(98, 0, 238, 255)",
     },
     "& #Dark": {
-      backgroundColor: "black",
-    },
+      backgroundColor: "rgba(40,48,62,255)",
+    }, 
   },
   motionDiv: {
     marginBottom: "30px",

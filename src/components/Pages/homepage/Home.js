@@ -13,9 +13,8 @@ const Home = () => {
   const { theme } = useTheme();
   return (
     <div className={classes.main}>
-      <Grid id={theme} className={classes.container} container>
+      <Grid className={classes.container} container>
         <Grid
-          id={theme}
           className={classes.item}
           xs={12}
           sm={12}
@@ -25,7 +24,7 @@ const Home = () => {
           xxl={8}
           item
         >
-          <Box id={theme} className={classes.card}>
+          <Box className={classes.card}>
             <motion.div transition={{ duration: 0.5 }} animate={{ y: -30 }}>
               <Typography
                 className={classes.title}
@@ -98,7 +97,7 @@ const Home = () => {
                 Feel free to Conect with me:
               </h1>
             </motion.div>
-            <Box className={classes.socialBox}>
+            <Box id={theme}  className={classes.socialBox}>
               <SocialIcons />
             </Box>
           </Box>
@@ -120,7 +119,7 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             animate={{ y: -40, x: -30 }}
           >
-            <img className={classes.mainImage} src={MainPhoto} alt="Main" />
+            <img id={theme} className={classes.mainImage} src={MainPhoto} alt="Main" />
           </motion.div>
         </Grid>
       </Grid>
