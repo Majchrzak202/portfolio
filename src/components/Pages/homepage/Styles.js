@@ -91,7 +91,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "30px",
     padding: "5px",
     marginBottom: "30px",
-    backgroundColor: 'rgba(40,48,62,255)',
     borderRadius: '8px',
     [theme.breakpoints.down("sm")]: {
       marginLeft: "0px",

@@ -9,6 +9,7 @@ import { Route } from "react-router-dom";
 import CustomRoutes from './../src/components/Pages/CustomRoutes'
 
 import { useTheme } from "./components/context/ThemeContextProvider";
+import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
 
 const About = lazy(() => import("./components/Pages/about/About"));
 const Projects = lazy(() => import("./components/Pages/projects/Projects"));
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <div className="App" id={theme}>
       <Navbar />
+      <ScrollToTop/>
       <Suspense fallback={<LoadingSpinner />}>
         <CustomRoutes>
           <Route path="/" element={<Home />}></Route>

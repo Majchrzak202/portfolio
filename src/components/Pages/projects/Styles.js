@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
+    padding: '25px',
     [theme.breakpoints.down("sm")]: {
       minHeight: "100%",
     },

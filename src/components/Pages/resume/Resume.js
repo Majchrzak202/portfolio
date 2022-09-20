@@ -5,7 +5,9 @@ import ResumePDF from "./../../../assets/Resume.pdf";
 import Button from "@mui/material/Button";
 import { useTheme } from "../../context/ThemeContextProvider.js";
 import useStyles from "./Styles.js";
+import useWindowSize from "../../hooks/useWindowSize.js";
 import { Box } from "@material-ui/core";
+
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -14,6 +16,7 @@ const Resume = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const classes = useStyles();
   const { theme } = useTheme();
+  const size = useWindowSize()
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -24,6 +27,7 @@ const Resume = () => {
       <h2>Download Resume</h2>
       <Button
         id={theme}
+        style={{textDecoration: 'none'}}
         sx={{
           marginBottom: "30px",
           color: "white",
@@ -32,11 +36,13 @@ const Resume = () => {
         <a
           href="https://github.com/Majchrzak202/portfolio/raw/master/src/assets/Resume.pdf"
           download
+          style={{textDecoration: 'none', color: 'black'}}
+          id={theme}
         >
           DOWNLOAD PDF
         </a>
       </Button>
-      <Box
+      { size.width > 600 && <Box
         style={{
           display: "flex",
           alignItems: "center",
@@ -46,7 +52,7 @@ const Resume = () => {
         <Document file={ResumePDF} onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} />
         </Document>
-      </Box>
+      </Box>}
     </div>
   );
 };

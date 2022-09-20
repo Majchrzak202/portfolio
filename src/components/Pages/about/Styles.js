@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100vh",
     flexDirection: "column",
     "& #Light": {
-      backgroundColor: "rgba(98, 0, 238, 100)",
+      backgroundColor: "rgba(98, 0, 238, 255)",
     },
     "& #Dark": {
       backgroundColor: "rgba(40,48,62,255)",

@@ -10,8 +10,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "150px",
     paddingBottom: "30px",
     "& #Light": {
-      backgroundColor: "rgba(98, 0, 238, 255)",
-      color: "white",
+      backgroundColor: "white",
       textDecoration: "none",
     },
     "& #Dark": {
@@ -19,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       width: "100vw",
+      justifyContent: 'flex-start'
     },
   },
 }));
