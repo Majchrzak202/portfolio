@@ -6,7 +6,7 @@ import "./App.css";
 import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 
 import { Route } from "react-router-dom";
-import CustomRoutes from './../src/components/Pages/CustomRoutes'
+import CustomRoutes from "./../src/components/Pages/CustomRoutes";
 
 import { useTheme } from "./components/context/ThemeContextProvider";
 import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className="App" id={theme}>
       <Navbar />
-      <ScrollToTop/>
+      <ScrollToTop />
       <Suspense fallback={<LoadingSpinner />}>
         <CustomRoutes>
           <Route path="/" element={<Home />}></Route>
