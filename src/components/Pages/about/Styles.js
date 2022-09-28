@@ -1,85 +1,36 @@
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  main: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "100vh",
-    flexDirection: "column",
+  about: {
     "& #Light": {
-      backgroundColor: "rgba(98, 0, 238, 255)",
+      backgroundColor: "rgba(40,48,62,255)",
     },
     "& #Dark": {
       backgroundColor: "rgba(40,48,62,255)",
-    }, 
-  },
-  container: {
-    marginTop: "200px",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "100vh",
-    width: "100%",
-    [theme.breakpoints.down("sm")]: {
-      marginTop: "250px",
-      minHeight: "100%",
+      color: "rgba(98, 0, 238, 255)",
     },
   },
-  typography: {
-    paddingLeft: "10px",
-    display: "flex",
-    flexDirection: "column",
-    justifyItems: "center",
-    [theme.breakpoints.down("sm")]: {
-      paddingLeft: "1px",
-      alignItems: "center",
-    },
+  main: {
+    heigth: "100%",
+    padding: "80px",
   },
+
   title: {
-    fontSize: "50px",
-    marginLeft: "20px",
+    fontSize: "40px",
+    color: "white",
+    textAlign: "center",
+    paddingBottom: "80px",
+  },
+
+  box: {
+    width: "70vw",
+    paddingTop: 50,
+  },
+
+  link: {
+    color: "rgba(98, 0, 238, 255)",
+    cursor: "pointer",
     fontWeight: 800,
-    fontStyle: "Open Sans",
-    textAlign: "left",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "25px",
-    },
-  },
-  photoBox: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  image: {
-    width: "400px",
-    height: "400px",
-    borderRadius: "99%",
-    /* backgroundColor: "rgba(40,48,62,255)", */
-    marginTop: "15px",
-    [theme.breakpoints.down("xs")]: {
-      width: "300px",
-      height: "300px",
-    },
-  },
-  hobbies: {
-    padding: "50px",
-    minHeight: "auto",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  hobbieBox: {
-    borderRadius: "100%",
-    backgroundColor: "rgba(242,244,246,255)",
-    padding: "10px",
-  },
-  hobbieGrid: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
   },
 }));
 
