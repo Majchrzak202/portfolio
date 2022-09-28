@@ -5,14 +5,15 @@ import { motion } from "framer-motion";
 import useStyles from "./Styles";
 import { useTheme } from "../../context/ThemeContextProvider";
 import { TypeAnimation } from "react-type-animation";
-import SocialIcons from "../../socialIcons/SocialIcons";
-import Github from "../../github-calendar/Github";
+import ContactBox from "../../contact/ContactBox";
+import { useInView } from "react-intersection-observer";
 
 const Home = () => {
   const classes = useStyles();
   const { theme } = useTheme();
+  const [ref, inView] = useInView();
   return (
-    <div className={classes.main}>
+    <div ref={ref} className={classes.main} id="home">
       <Grid className={classes.container} container>
         <Grid
           className={classes.item}
@@ -25,7 +26,11 @@ const Home = () => {
           item
         >
           <Box className={classes.card}>
-            <motion.div transition={{ duration: 0.5 }} animate={{ y: -30 }}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              animate={inView ? { y: -30, opacity: 1 } : ""}
+            >
               <Typography
                 className={classes.title}
                 style={{
@@ -37,11 +42,9 @@ const Home = () => {
                 }}
                 variant="h1"
               >
-                Hi there
+                Nice to meet you,
                 <motion.div
-                  style={{
-                    paddingLeft: "10px",
-                  }}
+                  className={classes.waveingHand}
                   animate={{ rotate: -20 }}
                   transition={{
                     repeat: Infinity,
@@ -74,9 +77,9 @@ const Home = () => {
                 sequence={[
                   "Junior React Developer",
                   2000, // Waits 1s
-                  "ServiceNow Consultant",
+                  "Self learner",
                   2000, // Waits 2s
-                  "Self learner", //
+                  "Man with a mission", //
                   2000,
                 ]}
                 wrapper="div"
@@ -84,29 +87,12 @@ const Home = () => {
                 repeat={Infinity}
                 className={classes.typeAnimation}
               />
-              <h1
-                style={{
-                  fontSize: "20px",
-                  marginLeft: "20px",
-                  fontWeight: 800,
-                  fontStyle: "Open Sans",
-                  textAlign: "left",
-                  marginTop: "30px",
-                }}
-              >
-                Feel free to Conect with me:
-              </h1>
             </motion.div>
-            <Box id={theme}  className={classes.socialBox}>
-              <SocialIcons />
-            </Box>
           </Box>
+          <ContactBox />
         </Grid>
         <Grid
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
+          className={classes.imageGrid}
           xs={12}
           sm={12}
           md={5}
@@ -116,10 +102,16 @@ const Home = () => {
           item
         >
           <motion.div
+            initial={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            animate={{ y: -40, x: -30 }}
+            animate={inView ? { y: -40, x: -30, opacity: 1 } : ""}
           >
-            <img id={theme} className={classes.mainImage} src={MainPhoto} alt="Main" />
+            <img
+              id={theme}
+              className={classes.mainImage}
+              src={MainPhoto}
+              alt="Main"
+            />
           </motion.div>
         </Grid>
       </Grid>
