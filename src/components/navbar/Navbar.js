@@ -16,6 +16,7 @@ import { useTheme } from "../context/ThemeContextProvider";
 import { Menu as MenuIcon } from "@material-ui/icons";
 import useStyles from "./Styles";
 import { Link } from "react-router-dom";
+import { Link as SmoothLink } from "react-scroll";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -31,18 +32,18 @@ const Navbar = () => {
   };
 
   const pages = [
-    <Link id={theme} to="/">
+    <SmoothLink to="home" spy={true} smooth={true} offset={0} duration={500} id={theme} >
       Home
-    </Link>,
-    <Link id={theme} to="/about">
-      About
-    </Link>,
-    <Link id={theme} to="/projects">
-      Projects
-    </Link>,
-    <Link id={theme} to="/resume">
-      Resume
-    </Link>,
+    </SmoothLink>,
+     <SmoothLink to="about" spy={true} smooth={true} offset={-30} duration={500} id={theme} >
+     About
+   </SmoothLink>,
+     <SmoothLink to="projects" spy={true} smooth={true} offset={50} duration={500} id={theme} >
+     Projects
+   </SmoothLink>,
+     <SmoothLink to="resume" spy={true} smooth={true} offset={80} duration={500} id={theme} >
+     Resume
+   </SmoothLink>,
   ];
 
   return (
@@ -123,4 +124,4 @@ const Navbar = () => {
     </div>
   );
 };
-export default Navbar;
+export default React.memo(Navbar);
