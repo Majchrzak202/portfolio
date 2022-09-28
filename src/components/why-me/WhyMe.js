@@ -5,6 +5,7 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { useTheme } from "../context/ThemeContextProvider";
 import useStyles from "./Styles";
+import ReactVisibilitySensor from "react-visibility-sensor";
 
 const WhyMe = () => {
   const classes = useStyles();
@@ -21,7 +22,6 @@ const WhyMe = () => {
       >
         <Grid container className={classes.container}>
           <Grid
-            ref={ref}
             className={classes.gridItem}
             item
             xs={12}
@@ -40,14 +40,13 @@ const WhyMe = () => {
               transition={{ duration: 1.7 }}
             >
               <Box className={classes.box}>
-                <CountUp
-                  className={classes.counter}
-                  start={0}
-                  end={305}
-                  duration={2}
-                  enableScrollSpy={true}
-                  scrollSpyDelay={0.3}
-                />
+                <CountUp start={0} end={305} duration={2}>
+                  {({ countUpRef, start }) => (
+                    <ReactVisibilitySensor onChange={start}>
+                      <span className={classes.counter} ref={countUpRef} />
+                    </ReactVisibilitySensor>
+                  )}
+                </CountUp>
                 <h1 style={{ fontSize: 15 }}>Kontrybucji Github</h1>
               </Box>
             </motion.div>
@@ -72,14 +71,13 @@ const WhyMe = () => {
               transition={{ duration: 1.7 }}
             >
               <Box className={classes.box}>
-                <CountUp
-                  className={classes.counter}
-                  start={0}
-                  end={1}
-                  duration={2}
-                  enableScrollSpy={true}
-                  scrollSpyDelay={0.3}
-                />
+                <CountUp start={0} end={1} duration={2}>
+                  {({ countUpRef, start }) => (
+                    <ReactVisibilitySensor onChange={start}>
+                      <span className={classes.counter} ref={countUpRef} />
+                    </ReactVisibilitySensor>
+                  )}
+                </CountUp>
                 <h1 style={{ fontSize: 25 }}>
                   Cel życiowy
                   <br />
@@ -107,14 +105,13 @@ const WhyMe = () => {
               transition={{ duration: 1.7 }}
             >
               <Box className={classes.box}>
-                <CountUp
-                  className={classes.counter}
-                  start={0}
-                  end={28}
-                  duration={2}
-                  enableScrollSpy={true}
-                  scrollSpyDelay={0.3}
-                />
+                <CountUp start={0} end={28} duration={2}>
+                  {({ countUpRef, start }) => (
+                    <ReactVisibilitySensor onChange={start}>
+                      <span className={classes.counter} ref={countUpRef} />
+                    </ReactVisibilitySensor>
+                  )}
+                </CountUp>
                 <h1 style={{ fontSize: 15 }}>Tatuaży</h1>
               </Box>
             </motion.div>
