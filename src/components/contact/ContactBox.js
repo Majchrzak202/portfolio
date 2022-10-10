@@ -16,7 +16,7 @@ const ContactBox = () => {
       animate={{ y: -20, x: 0, opacity: 1 }}
     >
       <Box className={classes.main}>
-        <h1 className={classes.title}>Feel free to Conect with me:</h1>
+        <h1 className={classes.title}>Feel free to Connect with me:</h1>
         <Box style={{ display: "flex" }}>
           <motion.div
             whileHover={{ scale: 1.2 }}

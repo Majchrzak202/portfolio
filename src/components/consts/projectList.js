@@ -1,11 +1,23 @@
 export const PROJECTS = [
   {
     id: 1,
+    title: "Coin Sauce",
+    descritpion: "Crypto Tracker App",
+    longDescritption:
+      "CoinSauce. You're place to track and follow your crypto. This app is made from pure React with usage of React Router. It is styled using Material UI core conceptcs. It uses Firebase SDK and Realtime Database to provide an autorization and user profile. User can add crypto to wishlist and remove it. It provides easy signup and password reset funcionality. It uses email.js to provide a fully working contact form. It uses Chart.js to dynamiclly output price info. It is working on the free coinstats API. You can easily track top cryptocurrencies, add them to portfolio and track price changes",
+    img: "https://i.ibb.co/5B2z8y1/Screenshot-2022-10-10-at-07-10-49.png",
+    links: {
+      site: "https://coinsauce.netlify.app/",
+      repo: "https://github.com/Majchrzak202/cryptoapp",
+    },
+  },
+  {
+    id: 2,
     title: "Financial Portfolio",
     descritpion: "Customer Project",
     longDescritption:
       "Customer Project of Financial Portfolio made with pure React. It is mainly designed with Material UI. It provides a functional Contact Form integrated with EmailJS. It uses React Router.  ",
-    img: "https://i.ibb.co/kxLBbkL/Screenshot-2022-09-14-at-08-26-04.png",
+    img: "https://i.ibb.co/Pw30cHp/Screenshot-2022-09-28-at-07-41-25.png",
     links: {
       site: "https://filipfinanse.netlify.app/",
       repo: "https://github.com/Majchrzak202/creditofficersite",
@@ -13,28 +25,15 @@ export const PROJECTS = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Beer Search App",
     descritpion: "Beer Search React App",
     longDescritption:
       "Beer App build with React, Material UI and CSS. It uses punkapi to fetch Beers. I have used here React Router, Lazy Loading, Loading Spinnder made with MUI.Ive also leveraged custom Hook for contact form validation. In this project i also used useEffect, useState and other core React features.  ",
-    img: "https://i.ibb.co/2jQj3bt/Screenshot-2022-08-12-at-18-20-35.png",
+    img: "https://i.ibb.co/yhBQTht/Screenshot-2022-09-28-at-07-37-57.png",
     links: {
       site: "https://beerworldapp.web.app/",
       repo: "https://github.com/Majchrzak202/beer-app",
-    },
-  },
-
-  {
-    id: 3,
-    title: "Simply Weather App",
-    descritpion: "Weather forecast React App ",
-    longDescritption:
-      "Simple React Weather App that uses React Routing, Custom Hooks and connects to OpenWeather.org API. It provides a 5 upcoming day weather forecast with temperature and weather conditions. It also contains a contact form with validation methods and dynamic outputs to user. It is hosted on the Firebase CLI. It also has a motion react. It is build with pure React and CSS. ",
-    img: "https://i.ibb.co/fGQBQBg/Screenshot-2022-07-17-at-06-04-32.png",
-    links: {
-      site: "https://weather-app-deploy-hosting.web.app/",
-      repo: "https://github.com/Majchrzak202/ForecastApp-/tree/master",
     },
   },
 ];

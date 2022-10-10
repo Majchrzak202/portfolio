@@ -40,7 +40,7 @@ const WhyMe = () => {
               transition={{ duration: 1.7 }}
             >
               <Box className={classes.box}>
-                <CountUp start={0} end={305} duration={2}>
+                <CountUp start={0} end={338} duration={2}>
                   {({ countUpRef, start }) => (
                     <ReactVisibilitySensor onChange={start}>
                       <span className={classes.counter} ref={countUpRef} />
