@@ -17,6 +17,8 @@ import { Menu as MenuIcon } from "@material-ui/icons";
 import useStyles from "./Styles";
 import { Link } from "react-router-dom";
 import { Link as SmoothLink } from "react-scroll";
+import { WbSunny } from "@material-ui/icons";
+import { NightsStay } from "@material-ui/icons";
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -32,18 +34,46 @@ const Navbar = () => {
   };
 
   const pages = [
-    <SmoothLink to="home" spy={true} smooth={true} offset={0} duration={500} id={theme} >
+    <SmoothLink
+      to="home"
+      spy={true}
+      smooth={true}
+      offset={0}
+      duration={500}
+      id={theme}
+    >
       Home
     </SmoothLink>,
-     <SmoothLink to="about" spy={true} smooth={true} offset={-30} duration={500} id={theme} >
-     About
-   </SmoothLink>,
-     <SmoothLink to="projects" spy={true} smooth={true} offset={50} duration={500} id={theme} >
-     Projects
-   </SmoothLink>,
-     <SmoothLink to="resume" spy={true} smooth={true} offset={80} duration={500} id={theme} >
-     Resume
-   </SmoothLink>,
+    <SmoothLink
+      to="about"
+      spy={true}
+      smooth={true}
+      offset={-30}
+      duration={500}
+      id={theme}
+    >
+      About
+    </SmoothLink>,
+    <SmoothLink
+      to="projects"
+      spy={true}
+      smooth={true}
+      offset={50}
+      duration={500}
+      id={theme}
+    >
+      Projects
+    </SmoothLink>,
+    <SmoothLink
+      to="resume"
+      spy={true}
+      smooth={true}
+      offset={80}
+      duration={500}
+      id={theme}
+    >
+      Resume
+    </SmoothLink>,
   ];
 
   return (
@@ -116,7 +146,11 @@ const Navbar = () => {
               </Menu>
             </Box>
             <Box>
-              <Switch onChange={toggleTheme}></Switch>
+              <Switch
+                onChange={toggleTheme}
+                icon={<WbSunny />}
+                checkedIcon={<NightsStay style={{ color: "white" }} />}
+              ></Switch>
             </Box>
           </Toolbar>
         </Container>
