@@ -1,6 +1,18 @@
 export const PROJECTS = [
   {
     id: 1,
+    title: "Coin Sauce",
+    descritpion: "Crypto Tracker App",
+    longDescritption:
+      "CoinSauce. You're place to track and follow your crypto. This app is made from pure React with usage of React Router. It is styled using Material UI core conceptcs. It uses Firebase SDK and Realtime Database to provide an autorization and user profile. User can add crypto to wishlist and remove it. It provides easy signup and password reset funcionality. It uses email.js to provide a fully working contact form. It uses Chart.js to dynamiclly output price info. It is working on the free coinstats API. You can easily track top cryptocurrencies, add them to portfolio and track price changes",
+    img: "https://i.ibb.co/5B2z8y1/Screenshot-2022-10-10-at-07-10-49.png",
+    links: {
+      site: "https://coinsauce.netlify.app/",
+      repo: "https://github.com/Majchrzak202/cryptoapp",
+    },
+  },
+  {
+    id: 2,
     title: "Financial Portfolio",
     descritpion: "Customer Project",
     longDescritption:
@@ -13,7 +25,7 @@ export const PROJECTS = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Beer Search App",
     descritpion: "Beer Search React App",
     longDescritption:
@@ -22,19 +34,6 @@ export const PROJECTS = [
     links: {
       site: "https://beerworldapp.web.app/",
       repo: "https://github.com/Majchrzak202/beer-app",
-    },
-  },
-
-  {
-    id: 3,
-    title: "Simply Weather App",
-    descritpion: "Weather forecast React App ",
-    longDescritption:
-      "Simple React Weather App that uses React Routing, Custom Hooks and connects to OpenWeather.org API. It provides a 5 upcoming day weather forecast with temperature and weather conditions. It also contains a contact form with validation methods and dynamic outputs to user. It is hosted on the Firebase CLI. It also has a motion react. It is build with pure React and CSS. ",
-    img: "https://i.ibb.co/fH3QBGq/Screenshot-2022-09-28-at-07-38-21.png",
-    links: {
-      site: "https://weather-app-deploy-hosting.web.app/",
-      repo: "https://github.com/Majchrzak202/ForecastApp-/tree/master",
     },
   },
 ];
