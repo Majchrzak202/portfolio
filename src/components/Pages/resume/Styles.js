@@ -27,13 +27,15 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     textDecoration: "none",
-    marginBottom: "30px",
+    marginBottom: 30,
     color: "white",
+    
   },
   box: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    marginTop: 30
   },
 }));
 
